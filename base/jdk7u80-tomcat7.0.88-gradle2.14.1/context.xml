@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+
+  <WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+  <Resource name="${jndi.name}" auth="Container" type="javax.sql.DataSource"
+    driverClassName="${jdbc.driver}" url="${jdbc.url}"
+    username="${jdbc.username}" password="${jdbc.password}"
+    maxActive="${conn.maxActive}" maxIdle="${conn.maxIdle}" maxWait="${conn.maxWait}"/>
+</Context>
