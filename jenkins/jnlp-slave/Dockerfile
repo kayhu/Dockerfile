@@ -15,5 +15,3 @@ RUN apt-get update && \
   usermod -aG docker jenkins
 
 USER jenkins
-
-ENTRYPOINT ["jenkins-slave"]

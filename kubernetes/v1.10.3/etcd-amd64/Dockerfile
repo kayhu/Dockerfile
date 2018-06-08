@@ -1,2 +1,2 @@
 FROM k8s.gcr.io/etcd-amd64:3.1.12
-MAINTAINER Kai Hu <hukai@chinacsci.com>
+MAINTAINER Kai Hu <kay_hu@163.com>
