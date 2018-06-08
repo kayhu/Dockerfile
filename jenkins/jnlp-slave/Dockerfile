@@ -1,6 +1,10 @@
 FROM jenkins/jnlp-slave:3.19-1
 MAINTAINER Kai Hu <kay_hu@163.com>
 
+ARG user=jenkins
+ARG group=docker
+ARG gid=993
+
 USER root
 
 ADD sources.list /etc/apt/
@@ -12,6 +16,7 @@ RUN apt-get update && \
   apt-get update && \
   apt-get install -y docker-ce && \
   apt-get clean && \
-  usermod -aG docker jenkins
+  groupadd -g ${gid} ${group}
+  usermod -aG ${group} ${user}
 
-USER jenkins
+USER ${user}
