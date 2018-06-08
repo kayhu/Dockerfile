@@ -20,5 +20,3 @@ RUN apt-get update && \
   usermod -aG ${group} ${user}
 
 USER ${user}
-
-ENTRYPOINT ["jenkins-slave"]
