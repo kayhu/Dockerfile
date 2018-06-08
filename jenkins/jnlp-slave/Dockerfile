@@ -11,6 +11,7 @@ RUN apt-get update && \
   add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/debian $(lsb_release -cs) stable" && \
   apt-get update && \
   apt-get install -y docker-ce && \
+  apt-get clean && \
   usermod -aG docker jenkins
 
 USER jenkins
