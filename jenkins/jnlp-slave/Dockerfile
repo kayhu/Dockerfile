@@ -16,7 +16,7 @@ RUN apt-get update && \
   apt-get update && \
   apt-get install -y docker-ce && \
   apt-get clean && \
-  groupadd -g ${gid} ${group}
+  groupadd -g ${gid} ${group} && \
   usermod -aG ${group} ${user}
 
 USER ${user}
