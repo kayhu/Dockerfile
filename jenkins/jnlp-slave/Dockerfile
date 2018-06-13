@@ -19,4 +19,7 @@ RUN apt-get update && \
   groupmod -g ${gid} ${group} && \
   usermod -aG ${group} ${user}
 
+RUN curl https://storage.googleapis.com/kubernetes-release/release/v1.10.3/bin/linux/amd64/kubectl -o /usr/bin/kubectl && \
+  chmod +x /usr/bin/kubectl
+
 USER ${user}
