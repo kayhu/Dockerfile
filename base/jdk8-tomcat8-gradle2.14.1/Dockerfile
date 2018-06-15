@@ -5,7 +5,8 @@ RUN wget -P download https://services.gradle.org/distributions/gradle-2.14.1-bin
   wget -P download http://mirrors.shu.edu.cn/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz && \
   unzip ./download/gradle-2.14.1-bin.zip -d /usr/local && \
   tar -xvf ./download/apache-tomcat-8.5.31.tar.gz -C /usr/local && \
-  rm -rf ./download
+  rm -rf ./download && \
+  ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 ENV CATALINA_HOME /usr/local/apache-tomcat-8.5.31
 ENV GRADLE_HOME /usr/local/gradle-2.14.1
